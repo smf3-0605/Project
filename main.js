@@ -79,14 +79,13 @@ function loadNextQuestion () {
     if(currentQuestion == totalQuestions) {
         container.style.display = 'none';
         result.innerHTML =
-         `<h1 class="final-score">Your score: ${totalScore}</h1>
-         <div class="summary">
-            <h1>Summary</h1>
-            <p>Possible - Personality Traits, see below for a summary based on your results:</p>
-            <p>15 - 21- You Need Help</p>
-            <p>10 - 15 - Good Soul</p>
-            <p>5 - 10 - Meh </p>
-            <p>5 - Are You Even Real</p>
+         `<h1 class="final-score">You scored: ${totalScore}</h1>
+         <div class="End of quiz results">
+            <h1>End of quiz results</h1>
+            <p>Check your score below to find out what type of hacker you are:</p>
+            <p>18 - 24 - Pro Hacker </p>
+            <p>10 - 18 - Regular Person</p>
+            <p>0 - 10 - Noob </p>
         </div>
         <button class="restart">Restart Quiz</button>
          `;
