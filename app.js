@@ -3,7 +3,7 @@
 const questions = [
     {
       "question": "Pick a social media platform",
-      "answer1": "under Instagram",
+      "answer1": "Instagram",
       "answer1Total": "1",
       "answer2": "Twitter",
       "answer2Total": "2",
@@ -16,61 +16,69 @@ const questions = [
       "answer1Total": "1",
       "answer2": "Microsoft Surface Pro",
       "answer2Total": "2",
-      "answer3": "Disagree",
+      "answer3": "Alienware PC",
       "answer3Total": "3"
     },
     {
       "question":
-        "Select in which order you would value these \"Money, Love & Career",
-      "answer1": "Love, Career, Money",
+        "Who of these do you identify with the most?",
+      "answer1": "Donald Trump",
       "answer1Total": "1",
-      "answer2": "Money, Career, Love",
-      "answer2Total": "3",
-      "answer3": "Career, Love, Money",
-      "answer3Total": "2"
+      "answer2": "Steve Jobs",
+      "answer2Total": "2",
+      "answer3": "Julian Assange",
+      "answer3Total": "3"
     },
     {
-      "question": "Best Sentence to describe you?",
-      "answer1": "You feel superior to other people.",
-      "answer1Total": "3",
-      "answer2": "You consider yourself more practical than creative.",
+      "question": "Your internet suddenly goes off, what do you do?",
+      "answer1": "The internet went off?",
+      "answer1Total": "1",
+      "answer2": "Call someone and complain",
       "answer2Total": "2",
       "answer3":
-        "Winning a debate matters less to you than making sure no one gets upset.",
-      "answer3Total": "1"
+        "Turn the off and on at the plug",
+      "answer3Total": "3"
     },
     {
-      "question": "Which best describes your relationship with food",
-      "answer1": "You tend to over-eat when you have company.",
+      "question": "If you have the chance to try out any of these for free, which would you pick?",
+      "answer1": "Apple Watch",
       "answer1Total": "1",
-      "answer2": "You tend to eat snacks secretly.",
+      "answer2": "Segway",
       "answer2Total": "2",
-      "answer3": "You prepare food and don\’t even look at the recipe.",
+      "answer3": "Oculus Rift",
       "answer3Total": "3"
     },
     {
       "question":
-        "You make plans with a friend and they cancel on you, what do you do?",
+        "If you had the choice, who would you choose to hack?",
       "answer1":
-        "Say \"whatever\" and plan a night that'll be GREAT so they don't cancel again.",
-      "answer1Total": "3",
-      "answer2": "Feel hurt because you were looking forward to tonight.",
+        "Your favourite online shopping site",
+      "answer1Total": "1",
+      "answer2": "Surveillance system",
       "answer2Total": "2",
-      "answer3": "No problem, you kinda wanted to stay home anyway.",
-      "answer3Total": "1"
+      "answer3": "Silicon Valley's network",
+      "answer3Total": "3"
     },
     {
-      "question": "Which of the following colours do you like most?",
-      "answer1": "Black",
+      "question": "What is JavaScript?",
+      "answer1": "Is that a new Starbucks item?",
       "answer1Total": "1",
-      "answer2": "Yellow or light blue",
+      "answer2": "Is that something to do with technology?",
       "answer2Total": "2",
-      "answer3": "Red or orange",
+      "answer3": "Is it a progamming language used to build websites?",
+      "answer3Total": "3"
+    },
+     {
+      "question": "What does HTML stand for?",
+      "answer1": "A home cooked hot meal ",
+      "answer1Total": "1",
+      "answer2": "Hotmail",
+      "answer2Total": "2",
+      "answer3": "Hypertext Markup Language",
       "answer3Total": "3"
     }
   ]
-  
-  
+ 
   let currentQuestion = 0;
   let score = [];
   let selectedAnswersData = [];
@@ -135,14 +143,13 @@ const questions = [
       if(currentQuestion == totalQuestions) {
           container.style.display = 'none';
           result.innerHTML =
-           `<h1 class="final-score">Your score: ${totalScore}</h1>
-           <div class="summary">
-              <h1>Summary</h1>
-              <p>Possible - Personality Traits, see below for a summary based on your results:</p>
-              <p>15 - 21- You Need Help</p>
-              <p>10 - 15 - Good Soul</p>
-              <p>5 - 10 - Meh </p>
-              <p>5 - Are You Even Real</p>
+           `<h1 class="final-score">You Scored: ${totalScore}</h1>
+           <div class="hacker type">
+              <h1>End of quiz results</h1>
+              <p>Check your score below to find out what type of hacker you are:</p>
+              <p>18 - 24- You Need Help</p>
+              <p>10 - 18 - Good Soul</p>
+              <p>0 - 10 - Meh </p>
           </div>
           <button class="restart">Restart Quiz</button>
            `;
