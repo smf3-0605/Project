@@ -1,0 +1,196 @@
+html {
+    scroll-behavior: smooth;
+} 
+
+
+
+#myVideo {
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    font-weight: normal;
+    font-size: 70px;
+    color:white;
+    
+}
+p{
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+  color:white;
+  
+}
+
+
+section {
+    min-height: 100%;
+    max-height: 100%;
+    text-align: center;
+}
+.LogoImg {
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 3% 0 3% 0;
+    height: 70%;
+    width: 35%;
+}
+
+.LogoImg2 {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 3% 0 3% 0;
+  padding-bottom: 3% 0 3% 0;
+  height: 5%;
+  width: 2.5%;
+}
+
+.menu-container{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 2;
+}
+
+.toggler{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.hamburger{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(54, 54, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.hamburger>div{
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: green;
+  transition: .4s;
+}
+.hamburger>div:before, .hamburger>div:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: green;
+  transition: .3s;
+}
+.hamburger>div:before{
+  top: -10px;
+}
+.hamburger>div:after{
+  top: 10px;
+}
+.toggler:checked + .hamburger>div{
+  transform: rotate(135deg)
+}
+.toggler:checked:hover + .hamburger>div{
+  transform: rotate(225deg)
+}
+
+.toggler:checked + .hamburger>div:after, .toggler:checked + .hamburger>div:before{
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.toggler:checked ~ .menu{
+  visibility: visible;
+}
+.toggler:checked ~ .menu > div{
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.toggler:checked ~ .menu > div > div{
+  opacity: 1;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  transition: .4s;
+}
+
+.menu > div{
+  position: absolute;
+  width: 1600px;
+  height: 1600px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-150%) translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: .6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > div > div{
+  max-width: 90vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+}
+
+.menu > div > div>  ul > li{
+  list-style: none;
+}
+
+.menu > div > div>  ul > li > a{
+  text-decoration: none;
+  margin: 2rem;
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  color: #fff;
+  transition: .3s;
+} 
+
+.menu > div > div>  ul > li > a:hover{
+  color: green;
+
+}
